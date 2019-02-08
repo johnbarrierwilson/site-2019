@@ -11,7 +11,9 @@
   flex-flow: column nowrap;
   height: 100vh;
   justify-content: center;
+  position: relative;
   width: 100vw;
+  z-index: 1;
 }
 
 // -------------------------------------
@@ -30,7 +32,7 @@
 // -------------------------------------
 
 .slide-content {
-  margin-left: 25vw;
+  margin-left: 35vw;
   max-width: $b-maxWidth;
 }
 

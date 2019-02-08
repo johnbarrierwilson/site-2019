@@ -1,5 +1,5 @@
 import React from 'react'
-import * as THREE from 'THREE'
+import * as THREE from 'three'
 
 class Blob extends React.Component {
   componentDidMount(){

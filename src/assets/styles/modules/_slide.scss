@@ -1,0 +1,39 @@
+// *************************************
+//
+//   Slide
+//   -> Full width height content
+//
+// *************************************
+
+.slide {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.slide--hero {
+  .slide-content {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.slide-content {
+  margin-left: 25vw;
+  max-width: $b-maxWidth;
+}
+
+// ----- Standard Comment ----- //
+
+// Small Comment

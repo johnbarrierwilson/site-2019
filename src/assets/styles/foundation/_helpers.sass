@@ -1,0 +1,39 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins, Extends, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Font Face ----- //
+// -> https://github.com/thoughtbot/bourbon/edit/master/app/assets/stylesheets/css3/_font-face.scss#
+//
+// $family - the font-family
+// $path - the font path
+// $weight - the font-weight
+// $style - the font-style
+// $asset-pipeline - use the Rails asset pipeline (boolean)
+
+=font-face($family, $path, $weight: normal, $style: normal)
+  @font-face
+    font-family: $family
+    font-style: $style
+    font-weight: $weight
+    src: url('/fonts/#{$path}.eot')
+    src: url('/fonts/#{$path}.eot?#iefix') format('embedded-opentype'), url('/fonts/#{$path}.woff') format('woff'), url('/fonts/#{$path}.ttf') format('truetype'), url('/fonts/#{$path}.svg##{$family}') format('svg')
+
+// ----- Respond-to ----- //
+// -> Generates a media query
+//
+// $val - the breakpoint size
+// $query - the type of query ('min-width', 'max-width')
+// $media - the media type ('screen', 'print', etc.)
+// @content - the generated content within the mixin
+
+=respond-to($val, $query: min-width, $media: screen)
+  @media #{$media} and ($query: $val)
+    @content

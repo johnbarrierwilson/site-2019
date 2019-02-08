@@ -1,0 +1,84 @@
+// *************************************
+//
+//   Config
+//   -> Fonts, Variables
+//
+// *************************************
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// ----- Open Sans ----- //
+
+@include font-face('Cadiz', 'CadizWeb-Regular');
+@include font-face('Nantes', 'NantesWeb-Light');
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// ----- Palette ----- //
+
+$c-orange: #f4400f;
+$c-red: #800000;
+
+// Grayscale
+$c-white: #ffffff;
+$c-gray: #AAAAAA;
+$c-black: #000000;
+
+// ----- Base ----- //
+
+$c-background-invert: $c-white;
+$c-background: $c-black;
+$c-border: $c-orange;
+$c-highlight: $c-orange;
+$c-subdue: lighten($c-gray, 25%);
+$c-text-invert: $c-black;
+$c-text: $c-gray;
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
+
+$b-borderRadius: 4px;
+$b-borderStyle: solid;
+$b-borderWidth: 1px;
+$b-border: $b-borderWidth $b-borderStyle $c-border;
+$b-boxShadow: 0 1px 4px rgba($c-text, 0.25);
+
+// ----- Typography ----- //
+
+$b-fontFamily-heading: 'Nantes', Georgia, Times, serif;
+$b-fontFamily: 'Cadiz', Helvetica, Arial, sans-serif;
+$b-fontSize: 20px;
+$b-fontSize-xs: 60%;
+$b-fontSize-s: 75%;
+$b-fontSize-m: 90%;
+$b-fontSize-l: 115%;
+$b-fontSize-xl: 600%;
+$b-lineHeight: 1.5;
+
+// ----- Sizing ----- //
+
+$b-maxWidth: 750px;
+$b-space: 20px;
+$b-space-xs: $b-space * 0.25;
+$b-space-s: $b-space * 0.5;
+$b-space-l: $b-space * 2;
+$b-space-xl: $b-space * 4;
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// ----- Grid ----- //
+
+// Breakpoints
+
+$g-s: 480px;
+$g-m: 800px;
+$g-l: 1024px;

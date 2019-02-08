@@ -25,26 +25,29 @@ class Blob extends React.Component {
     light2.position.set(-200, 300, 400); 
     this.scene.add(light2);
     
-    const geometry = new THREE.IcosahedronGeometry(210, 4);
+    this.geometry = new THREE.IcosahedronGeometry(210, 0);
+    for(var i = 0; i < this.geometry.vertices.length; i++) {
+      var vector = this.geometry.vertices[i];
+      vector._o = vector.clone();
+    }
     const material = new THREE.MeshPhongMaterial({
       emissive: '#f4400f', 
       emissiveIntensity: 0.4,
       shininess: 0
     });
-    this.shape = new THREE.Mesh(geometry, material)
+    this.shape = new THREE.Mesh(this.geometry, material)
     this.scene.add(this.shape)
 
     requestAnimationFrame(this.animate)
   }
+
   animate = () => {
-    this.shape.rotation.x += 0.01
-    this.shape.rotation.y += 0.01
-    this.renderScene()
-    this.frameId = window.requestAnimationFrame(this.animate)
-  }
-  renderScene = () => {
+    this.shape.rotation.x += 0.005
+    this.shape.rotation.y += 0.005
     this.renderer.render(this.scene, this.camera)
+    requestAnimationFrame(this.animate)
   }
+  
   render(){
     return(
       <div

@@ -7,13 +7,30 @@
 
 .logo {
   color: $c-text;
-  font-size: 14px;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 10px;
   line-height: 1.2;
-  left: 40px;
+  left: 24px;
   position: fixed;
-  top: 40px;
+  top: 24px;
   width: 150px;
   z-index: 1;
+  @include respond-to($g-l) {
+    font-size: 14px;
+    left: 40px;
+    top: 40px;
+  }
+  img {
+    height: 26px;
+    margin-right: 12px;
+    width: 38px;
+    @include respond-to($g-l) {
+      height: 35px;
+      margin-right: 16px;
+      width: 50px;
+    }
+  }
 }
 
 // -------------------------------------

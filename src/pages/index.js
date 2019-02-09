@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Blob from '../components/blob'
 import Layout from "../components/layout"
@@ -15,9 +15,11 @@ class IndexPage extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
-      this.setState({
-        distance: window.scrollY
-      })
+      if (window.outerWidth > 1024) {
+        this.setState({
+          distance: window.scrollY
+        })
+      }
     })
   }
 
@@ -47,7 +49,7 @@ class IndexPage extends React.Component {
             <h1>A Simple Solution</h1>
             <p>It's widely understood that websites can be difficult and complicated. I've spent 10 years working on websites for innovative startups so that I can bring that same level of innovation and simplicity to your small business website. Together we can make your website something you are proud to show off.</p>
             <h3>Services</h3>
-            <ul>
+            <ul className="columns">
               <li>Messaging &amp; Strategy</li>
               <li>Information Architecture</li>
               <li>Concepts &amp; Prototypes</li>
@@ -55,6 +57,25 @@ class IndexPage extends React.Component {
               <li>Website Development</li>
               <li>Maintenance &amp; Iteration</li>
             </ul>
+            <Link className="button" to="/">Book Now</Link>
+          </div>
+        </div>
+        <div className="slide">
+          <div className="slide-content">
+            <h1>The Pragmatic Process</h1>
+            <p>It's easier than you might think to bring innovation to your small business:</p>
+            <ol>
+              <li>Schedule a consultation</li>
+              <li>I’ll create your website</li>
+              <li>Innovate your business</li>
+            </ol>
+          </div>
+        </div>
+        <div className="slide">
+          <div className="slide-content">
+            <h1>Your Future</h1>
+            <p>If you continue to use templated sites, you'll continue to be obscure—that is incredibly dangerous for your business. The great news is that you can stand out, feel proud, earn more revenue and truly reflect your business through your website. It's just one click away.</p>
+            <Link className="button" to="/">Book Now</Link>
           </div>
         </div>
       </Layout>

@@ -5,6 +5,9 @@ import { StaticQuery, graphql } from "gatsby"
 
 import "../assets/styles/application.scss"
 
+import Avatar from '../assets/images/logo-avatar.svg'
+import Monogram from '../assets/images/logo-monogram.svg'
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -18,8 +21,12 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <p className="logo">hi. my name is john&nbsp;barrier&nbsp;wilson</p>
-        <Link className="button" to="/">Book Now</Link>
+        <p className="logo">
+          <img src={Avatar} alt="avatar based logo" />
+          hi. my name is john&nbsp;barrier&nbsp;wilson
+        </p>
+        <Link className="button button--fixed" to="/">Book Now</Link>
+        <img className="monogram" src={Monogram} alt="monogram based logo" />
         {children}
       </>
     )}

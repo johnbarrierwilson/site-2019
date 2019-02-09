@@ -1,0 +1,29 @@
+// *************************************
+//
+//   Monogram
+//   -> j|w logo
+//
+// *************************************
+
+.monogram {
+  bottom: 24px;
+  height: 38px;
+  left: 24px;
+  position: fixed;
+  width: 38px;
+  z-index: 1;
+  @include respond-to($g-l) {
+    bottom: 40px;
+    height: 50px;
+    left: 40px;
+    width: 50px;
+  }
+}
+
+// -------------------------------------
+//   Large Comment
+// -------------------------------------
+
+// ----- Standard Comment ----- //
+
+// Small Comment

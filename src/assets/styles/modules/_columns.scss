@@ -1,0 +1,23 @@
+// *************************************
+//
+//   Columns
+//   -> Basic column layout for uls
+//
+// *************************************
+
+.columns {
+  list-style-position: inside;
+  margin-top: 16px;
+  padding: 0;
+  @include respond-to($g-l) {
+    column-count: 2;
+  }
+}
+
+// -------------------------------------
+//   Large Comment
+// -------------------------------------
+
+// ----- Standard Comment ----- //
+
+// Small Comment

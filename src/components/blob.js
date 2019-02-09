@@ -6,6 +6,16 @@ class Blob extends React.Component {
     const width = this.blob.clientWidth
     const height = this.blob.clientHeight
 
+    let baseColor, lightColor
+
+    if (window.outerWidth > 1024) {
+      baseColor = '#800000'
+      lightColor = '#f4400f'
+    } else {
+      baseColor = '#000000'
+      lightColor = '#333333'
+    }
+
     this.renderer = new THREE.WebGLRenderer({ antialias: true })
     this.renderer.setPixelRatio(2);
     this.renderer.setClearColor('#000000')
@@ -17,21 +27,21 @@ class Blob extends React.Component {
     this.camera = new THREE.PerspectiveCamera(100, width / height, 0.1, 1000)
     this.camera.position.z = 300
 
-    const light1 = new THREE.DirectionalLight('#f4400f', 0.5);
-    light1.position.set(-200, 300, 150); 
+    const light1 = new THREE.DirectionalLight(lightColor, 0.5);
+    light1.position.set(-400, 500, 150); 
     this.scene.add(light1);
 
     const light2 = light1.clone();
-    light2.position.set(-200, 300, 350); 
+    light2.position.set(-350, 450, 550); 
     this.scene.add(light2);
-    
+
     this.geometry = new THREE.IcosahedronGeometry(140, 5);
     for(var i = 0; i < this.geometry.vertices.length; i++) {
       var vector = this.geometry.vertices[i];
       vector._o = vector.clone();
     }
     const material = new THREE.MeshPhongMaterial({
-      emissive: '#800000', 
+      emissive: baseColor, 
       emissiveIntensity: 0.4,
       shininess: 0
     });
@@ -53,8 +63,8 @@ class Blob extends React.Component {
       var vector = this.geometry.vertices[i];
       vector.copy(vector._o);
       var perlin = window.noise.simplex3(
-          (vector.x * 0.002) + (a * 0.0001),
-          (vector.y * 0.002) + (a * 0.0001),
+          (vector.x * 0.002) + (a * 0.00005),
+          (vector.y * 0.002) + (a * 0.00005),
           (vector.z * 0.002)
       );
       var ratio = ((perlin * 0.4) + 0.8);
@@ -68,7 +78,7 @@ class Blob extends React.Component {
       <div
         className="blob"
         ref={(blob) => { this.blob = blob }}
-        style={{ transform: `translateX(${this.props.shift < 500 ? this.props.shift * -1 : -500}px)` }}
+        style={{ transform: `translateX(${this.props.shift < 450 ? this.props.shift * -1 : -450}px)` }}
       />
     )
   }

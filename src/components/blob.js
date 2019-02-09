@@ -18,14 +18,14 @@ class Blob extends React.Component {
     this.camera.position.z = 300
 
     const light1 = new THREE.DirectionalLight('#f4400f', 0.5);
-    light1.position.set(0, 300, 200); 
+    light1.position.set(-200, 300, 150); 
     this.scene.add(light1);
 
     const light2 = light1.clone();
-    light2.position.set(-400, 300, 200); 
+    light2.position.set(-200, 300, 350); 
     this.scene.add(light2);
     
-    this.geometry = new THREE.IcosahedronGeometry(170, 5);
+    this.geometry = new THREE.IcosahedronGeometry(140, 5);
     for(var i = 0; i < this.geometry.vertices.length; i++) {
       var vector = this.geometry.vertices[i];
       vector._o = vector.clone();
@@ -68,6 +68,7 @@ class Blob extends React.Component {
       <div
         className="blob"
         ref={(blob) => { this.blob = blob }}
+        style={{ transform: `translateX(${this.props.shift < 500 ? this.props.shift * -1 : -500}px)` }}
       />
     )
   }

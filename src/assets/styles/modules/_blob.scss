@@ -6,12 +6,11 @@
 // *************************************
 
 .blob {
-  height: 750px;
-  left: 50%;
+  height: 100vh;
+  left: 0;
   position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 750px;
+  top: 0;
+  width: 100vw;
   z-index: 0;
 }
 

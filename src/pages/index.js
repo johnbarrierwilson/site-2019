@@ -6,11 +6,30 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class IndexPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      distance: 0
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+      this.setState({
+        distance: window.scrollY
+      })
+    })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll")
+  }
+
   render() {
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <Blob />
+        <Blob shift={this.state.distance} />
         <div className="slide slide--hero">
           <div className="slide-content">
             <h1>Innovative Websites</h1>

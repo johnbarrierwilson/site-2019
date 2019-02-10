@@ -1,0 +1,30 @@
+// *************************************
+//
+//   Tagline
+//   -> Phrase
+//
+// *************************************
+
+.tagline {
+  bottom: 20px;
+  font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  position: fixed;
+  right: 20px;
+  transform: rotate(90deg) translateX(#{$b-space * 1.5});
+  transform-origin: 100% 0%;
+  z-index: 1;
+  @include respond-to($g-l) {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+// -------------------------------------
+//   Large Comment
+// -------------------------------------
+
+// ----- Standard Comment ----- //
+
+// Small Comment

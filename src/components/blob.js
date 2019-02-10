@@ -6,15 +6,8 @@ class Blob extends React.Component {
     const width = this.blob.clientWidth
     const height = this.blob.clientHeight
 
-    let baseColor, lightColor
-
-    if (window.outerWidth > 1024) {
-      baseColor = '#800000'
-      lightColor = '#f4400f'
-    } else {
-      baseColor = '#000000'
-      lightColor = '#333333'
-    }
+    let baseColor = '#800000'
+    let lightColor = '#f4400f'
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true })
     this.renderer.setPixelRatio(2);
@@ -35,7 +28,7 @@ class Blob extends React.Component {
     light2.position.set(-350, 450, 550); 
     this.scene.add(light2);
 
-    this.geometry = new THREE.IcosahedronGeometry(140, 5);
+    this.geometry = new THREE.IcosahedronGeometry(140, 4);
     for(var i = 0; i < this.geometry.vertices.length; i++) {
       var vector = this.geometry.vertices[i];
       vector._o = vector.clone();
@@ -78,7 +71,7 @@ class Blob extends React.Component {
       <div
         className="blob"
         ref={(blob) => { this.blob = blob }}
-        style={{ transform: `translateX(${this.props.shift < 450 ? this.props.shift * -1 : -450}px)` }}
+        style={{ transform: `translateX(${this.props.shift < 450 ? this.props.shift * -0.05 : -22.5}%)` }}
       />
     )
   }

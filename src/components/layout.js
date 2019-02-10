@@ -26,6 +26,7 @@ const Layout = ({ children }) => (
           hi. my name is john&nbsp;barrier&nbsp;wilson
         </p>
         <Link className="button button--fixed" to="/">Book Now</Link>
+        <p className="tagline">hassle-free websites</p>
         <img className="monogram" src={Monogram} alt="monogram based logo" />
         {children}
       </>

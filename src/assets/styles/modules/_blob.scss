@@ -6,16 +6,20 @@
 // *************************************
 
 .blob {
-  animation: blobFadeIn 1 3s ease;
+  animation: blobFadeInMobile 1 3s ease;
   animation-fill-mode: forwards;
   height: 100vh;
   left: 0;
   opacity: 0;
   position: fixed;
   top: 0;
-  transition: transform 400ms ease-out;
+  // transition: transform 400ms ease-out;
   width: 100vw;
   z-index: 0;
+  @include respond-to($g-l) {
+    animation: blobFadeIn 1 3s ease;
+    animation-fill-mode: forwards;
+  }
 }
 
 // -------------------------------------
@@ -28,6 +32,15 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes blobFadeInMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
   }
 }
 

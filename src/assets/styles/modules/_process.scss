@@ -1,0 +1,57 @@
+// *************************************
+//
+//   Process
+//   -> Storybrand steps
+//
+// *************************************
+
+.process {
+  counter-reset: process;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 32px;
+  padding: 0;
+  @include respond-to($g-l) {
+    flex-direction: row;
+    text-align: center;
+  }
+  li{
+    color: $c-white;
+    counter-increment: process;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    @include respond-to($g-l) {
+      margin-bottom: 0;
+    }
+    &::before {
+      align-items: center;
+      background: $c-orange;
+      background-image: linear-gradient(to bottom right, $c-white, $c-gray);
+      border-radius: 50%;
+      color: $c-black;
+      content: counter(process);
+      display: inline-flex;
+      height: 40px;
+      justify-content: center;
+      margin: 0 16px 16px 0;
+      width: 40px;
+      @include respond-to($g-l) {
+        display: flex;
+        font-size: 1.325rem;
+        height: 64px;
+        margin: 0 auto 16px;
+        width: 64px;
+      }
+    }
+  }
+}
+
+// -------------------------------------
+//   Large Comment
+// -------------------------------------
+
+// ----- Standard Comment ----- //
+
+// Small Comment

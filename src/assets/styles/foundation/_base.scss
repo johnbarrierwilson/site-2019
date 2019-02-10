@@ -70,6 +70,7 @@ h1,
 h2,
 .h2 {
   font-family: $b-fontFamily-heading;
+  font-weight: 300;
   font-size: 175%;
   margin-bottom: 24px;
   @include respond-to($g-l) {

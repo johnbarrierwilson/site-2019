@@ -31,6 +31,7 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const date = new Date().getFullYear()
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -79,6 +80,28 @@ class IndexPage extends React.Component {
             <h2>Your Future</h2>
             <p>If you continue to use templated sites, you'll continue to be obscure—that is incredibly dangerous for your business. The great news is that you can stand out, feel proud, earn more revenue and truly reflect your business through your website. It's just one click away.</p>
             <Link className="button" to="/">Book Now</Link>
+          </div>
+        </div>
+        <div className="slide slide--footer">
+          <div className="slide-content">
+            <hr />
+            <div className="grid grid--split mbl">
+              <div>
+                <h5 className="mbs">Colophon</h5>
+                <ul className="tss">
+                  <li>Branding: <a href="https://www.carnleydesign.com/">Josh Carnley</a></li>
+                  <li>Messaging: <a href="https://www.storybrand.com/">Storybrand</a></li>
+                  <li>Type: <a href="https://luzi-type.ch/nantes">Nantes Light</a> &amp; <a href="https://luzi-type.ch/cadiz">Cadiz Regular</a></li>
+                  <li>"Blob" Animation: <a href="https://www.threejs.org">Three.js</a></li>
+                  <li>Stack: <a href="https://www.gatsbyjs.org">Gatsby.js</a> &amp; <a href="https://www.netlify.com">Netlify</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="tcn tss">This site does not track you.</p>
+                <hr style={{marginBottom: 'none'}} />
+                <p className="tss">Copyright 2019, John Barrier Wilson.<br />All rights reserved.</p>
+              </div>
+            </div>
           </div>
         </div>
       </Layout>

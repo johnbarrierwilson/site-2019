@@ -24,6 +24,17 @@
 //   Modifiers
 // -------------------------------------
 
+.slide--footer {
+  margin: 0 0 40px;
+  a {
+    border-bottom: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
 .slide--hero {
   height: 100vh;
   margin: 0;

@@ -28,7 +28,7 @@ class Blob extends React.Component {
     light2.position.set(-350, 450, 550); 
     this.scene.add(light2);
 
-    this.geometry = new THREE.IcosahedronGeometry(140, 4);
+    this.geometry = new THREE.IcosahedronGeometry(140, 3);
     for(var i = 0; i < this.geometry.vertices.length; i++) {
       var vector = this.geometry.vertices[i];
       vector._o = vector.clone();

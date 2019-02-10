@@ -40,8 +40,6 @@ li {
   margin-top: 0;
 }
 
-// ----- Headings ----- //
-
 h1,
 .h1,
 h2,
@@ -49,7 +47,9 @@ h2,
 h3,
 .h3,
 h4,
-.h4 {
+.h4,
+h5,
+.h5 {
   color: $c-white;
   line-height: 1.1;
   margin-bottom: $b-space-xs;
@@ -91,6 +91,12 @@ h4,
   font-size: 110%;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid rgba($c-white, 0.2);
+  margin: 40px auto;
+}
+
 // -------------------------------------
 //   Inline Content
 // -------------------------------------
@@ -103,7 +109,7 @@ a {
   text-decoration: none;
   &:hover,
   &:focus {
-    color: lighten($c-highlight, 5%);
+    color: lighten($c-highlight, 10%);
   }
 }
 

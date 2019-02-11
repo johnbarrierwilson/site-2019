@@ -27,14 +27,17 @@
 .tcn {
   color: $c-text !important;
 }
+.tco {
+  color: $c-orange !important;
+}
 
 // ----- Sizes ----- //
 
 .tss {
-  font-size: 75% !important;
+  font-size: 0.75rem !important;
 }
 .tsl {
-  font-size: 120% !important;
+  font-size: 1.25rem !important;
 }
 
 // ----- Standard Comment ----- //

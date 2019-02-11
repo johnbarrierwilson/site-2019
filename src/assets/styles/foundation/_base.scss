@@ -60,10 +60,10 @@ h1,
 .h1 {
   font-family: $b-fontFamily-heading;
   font-weight: 300;
-  font-size: 250%;
+  font-size: 275%;
   margin-bottom: 16px;
   @include respond-to($g-l) {
-    font-size: 375%;
+    font-size: 425%;
   }
 }
 
@@ -80,9 +80,9 @@ h2,
 
 h3,
 .h3 {
-  font-size: 120%;
+  font-size: 1rem;
   @include respond-to($g-l) {
-    font-size: 150%;
+    font-size: 1.125rem;
   }
 }
 

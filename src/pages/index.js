@@ -1,5 +1,5 @@
 import React from "react"
-// import {graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 
 import Blob from '../components/blob'
 import Contact from '../components/contact'
@@ -67,14 +67,14 @@ class IndexPage extends React.Component {
         <div className="slide">
           <div className="slide-content">
             <h2>The Big Problem</h2>
-            <p>The bland, templated website is too common. If your website doesn't stand out, you are loosing leads and potential customers. I believe it's wrong for your business be obscure and for you to feel unrecognized. Enough is enough, your website needs to truly reflect your incredible business.</p>
+            <p className="tsl">The bland Squarespace and Wix websites are too common. If your website doesn't stand out, you will loose leads and potential customers. Enough is enough, you need to be recognized for all your hard work and your website needs to truly reflect your incredible business.</p>
           </div>
         </div>
         <div className="slide">
           <div className="slide-content">
             <h2>A Simple Solution</h2>
-            <p>It's widely understood that websites can be difficult and complicated. I've spent 10 years working on websites for innovative startups so that I can bring that same level of innovation and simplicity to your small business website. Together we can make your website something you are proud to show off.</p>
-            <h3>Services</h3>
+            <p>I get it, websites can be complicated so Squarespace and Wix are easy solutions. At the same time, you should know that I've spent 10 years working on websites for innovative startups so that I can bring that same level of creativity, innovation and simplicity to your website. Together we can make your website something you are truly proud to show off.</p>
+            <h3>My services for your success...</h3>
             <ul className="columns">
               <li>Messaging &amp; Strategy</li>
               <li>Information Architecture</li>
@@ -89,6 +89,9 @@ class IndexPage extends React.Component {
         <div className="slide slide--center">
           <div className="slide-content">
             <h2>My Work</h2>
+            <div className="cell cell--s">
+              <p>You can have a website just like the dozens I've created for other businesses like yours.</p>
+            </div>
             <div className="grid grid--shots">
               {shots.map((shot, index) => {
                 console.log(shot)
@@ -107,16 +110,16 @@ class IndexPage extends React.Component {
             <h2>The Pragmatic Process</h2>
             <p>It's easier than you might think to bring innovation to your small business:</p>
             <ol className="process">
-              <li>Schedule a consultation</li>
-              <li>I’ll create your website</li>
-              <li>Innovate your business</li>
+              <li>Schedule a<br />free consultation</li>
+              <li>We design and<br />build your website.</li>
+              <li>Proudly share and<br />grow your business</li>
             </ol>
           </div>
         </div>
         <div className="slide">
           <div className="slide-content">
             <h2>Your Future</h2>
-            <p>If you continue to use templated sites, you'll continue to be obscure—that is incredibly dangerous for your business. The great news is that you can stand out, feel proud, earn more revenue and truly reflect your business through your website. It's just one click away.</p>
+            <p>If you continue to use template sites, you'll continue to be obscure. And that is incredibly dangerous for your business. The great news is that you can stand out, feel proud, earn more revenue and truly reflect your business through your website. <span className="tco">It's just one click away.</span></p>
             <button className="button" onClick={this.toggleContact}>Book Now</button>
           </div>
         </div>

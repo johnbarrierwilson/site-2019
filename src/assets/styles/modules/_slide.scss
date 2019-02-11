@@ -40,7 +40,7 @@
   margin: 0;
   .slide-content {
     margin-left: 0;
-    max-width: 200px;
+    max-width: 220px;
     text-align: center;
     @include respond-to($g-l) {
       max-width: $b-maxWidth;

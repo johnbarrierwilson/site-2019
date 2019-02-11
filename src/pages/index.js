@@ -1,27 +1,28 @@
 import React from "react"
-import { Link } from "gatsby"
-// import { throttle } from 'lodash'
 
 import Blob from '../components/blob'
+import Contact from '../components/contact'
 import Layout from "../components/layout"
+import Navigation from "../components/navigation"
 import SEO from "../components/seo"
 
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      distance: 0
+      contactFade: false,
+      distance: 0,
+      showContact: false
     }
+    this.toggleContact = this.toggleContact.bind(this)
   }
 
   componentDidMount() {
     if (window.outerWidth > 1024) {
       window.addEventListener("scroll", () => {
-        // throttle(() => {  
-          this.setState({
-            distance: window.scrollY
-          })
-        // }, 300)}
+        this.setState({
+          distance: window.scrollY
+        })
       })
     }
   }
@@ -30,10 +31,29 @@ class IndexPage extends React.Component {
     window.removeEventListener("scroll")
   }
 
+  toggleContact() {
+    if (this.state.showContact) {
+      this.setState({
+        contactFade: true
+      })
+      setTimeout(() => {
+        this.setState({
+          contactFade: false,
+          showContact: false,
+        })
+      }, 300)
+    } else {
+      this.setState({
+        showContact: !this.state.showContact
+      })
+    }
+  }
+
   render() {
     const date = new Date().getFullYear()
     return (
       <Layout>
+        <Navigation toggleContact={this.toggleContact} />
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Blob shift={this.state.distance} />
         <div className="slide slide--hero">
@@ -45,7 +65,7 @@ class IndexPage extends React.Component {
         <div className="slide">
           <div className="slide-content">
             <h2>The Big Problem</h2>
-            <p>The bland website is too common among small businesses. If your website doesn't stand out, you are loosing leads and potential customers. I believe it's wrong for your business be obscure and for you to feel unrecognized. Enough is enough, your website needs to truly reflect your incredible business.</p>
+            <p>The bland, templated website is too common. If your website doesn't stand out, you are loosing leads and potential customers. I believe it's wrong for your business be obscure and for you to feel unrecognized. Enough is enough, your website needs to truly reflect your incredible business.</p>
           </div>
         </div>
         <div className="slide">
@@ -61,7 +81,7 @@ class IndexPage extends React.Component {
               <li>Website Development</li>
               <li>Maintenance &amp; Iteration</li>
             </ul>
-            <Link className="button" to="/">Book Now</Link>
+            <button className="button" onClick={this.toggleContact}>Book Now</button>
           </div>
         </div>
         <div className="slide slide--process">
@@ -79,7 +99,7 @@ class IndexPage extends React.Component {
           <div className="slide-content">
             <h2>Your Future</h2>
             <p>If you continue to use templated sites, you'll continue to be obscure—that is incredibly dangerous for your business. The great news is that you can stand out, feel proud, earn more revenue and truly reflect your business through your website. It's just one click away.</p>
-            <Link className="button" to="/">Book Now</Link>
+            <button className="button" onClick={this.toggleContact}>Book Now</button>
           </div>
         </div>
         <div className="slide slide--footer">
@@ -99,11 +119,12 @@ class IndexPage extends React.Component {
               <div>
                 <p className="tcn tss">This site does not track you.</p>
                 <hr style={{marginBottom: 'none'}} />
-                <p className="tss">Copyright 2019, John Barrier Wilson.<br />All rights reserved.</p>
+                <p className="tss">Copyright {date}, John Barrier Wilson.<br />All rights reserved.</p>
               </div>
             </div>
           </div>
         </div>
+        {this.state.showContact && <Contact fadeOut={this.state.contactFade} toggleContact={this.toggleContact} />}
       </Layout>
     )
   }

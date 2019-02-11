@@ -6,17 +6,20 @@
 // *************************************
 
 .button {
+  -webkit-appearance: none;
   background: $c-orange;
   background-image: linear-gradient(to right, $c-orange, $c-red);
   border: none;
   border-radius: 100px;
   color: $c-text;
+  cursor: pointer;
   display: inline-block;
   margin-top: 16px;
+  outline: none;
   padding: 16px 40px;
   transition: all 300ms ease-out;
   z-index: 2;
-  &:hover, &:focus {
+  &:hover {
     background: $c-orange;
     background-image: linear-gradient(to right, $c-orange 100%, $c-red 200%);
     color: $c-text;
@@ -34,6 +37,7 @@
   position: fixed;
   right: 20px;
   top: 20px;
+  z-index: $z-book;
   @include respond-to($g-l) {
     font-size: 0.875rem;
     padding: 12px 32px;

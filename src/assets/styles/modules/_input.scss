@@ -1,0 +1,33 @@
+// *************************************
+//
+//   Input
+//   -> Contact form large inputs
+//
+// *************************************
+
+.input {
+  -webkit-appearance: none;
+  background: rgba($c-black, 0.2);
+  border: none;
+  color: $c-white;
+  outline: none;
+  font-size: 1.25rem;
+  margin-top: 24px;
+  padding: 16px 24px;
+  width: 100%;
+  @include respond-to($g-l) {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+  &::placeholder {
+    color: rgba($c-white, 0.4);
+  }
+}
+
+// -------------------------------------
+//   Large Comment
+// -------------------------------------
+
+// ----- Standard Comment ----- //
+
+// Small Comment

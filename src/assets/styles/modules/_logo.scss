@@ -15,7 +15,7 @@
   position: fixed;
   top: 24px;
   width: 150px;
-  z-index: 1;
+  z-index: $z-logo;
   @include respond-to($g-l) {
     font-size: 14px;
     left: 40px;

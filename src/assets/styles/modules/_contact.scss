@@ -1,0 +1,89 @@
+// *************************************
+//
+//   Contact
+//   -> Book now overlay
+//
+// *************************************
+
+.contact {
+  align-items: center;
+  animation: contactFadeIn 1 300ms ease-out;
+  animation-fill-mode: forwards;
+  background-image: linear-gradient(to bottom right, $c-orange, $c-red);
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 0 60px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: $z-contact;
+}
+
+// -------------------------------------
+//   State
+// -------------------------------------
+
+.contact.is-fading {
+  animation: contactFadeOut 1 300ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.contact-close {
+  -webkit-appearance: none;
+  background: none;
+  border: 1px solid rgba($c-white, 0.4);
+  border-radius: 50%;
+  color: $c-white;
+  cursor: pointer;
+  font-size: 200%;
+  font-weight: 300;
+  height: 40px;
+  line-height: 109%;
+  outline: none;
+  position: fixed;
+  right: 24px;
+  top: 24px;
+  width: 40px;
+  @include respond-to($g-l) {
+    height: 50px;
+    line-height: 47px;
+    right: 40px;
+    top: 40px;
+    width: 50px;
+  }
+}
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+@keyframes contactFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contactFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// ----- Standard Comment ----- //
+
+// Small Comment

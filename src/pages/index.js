@@ -27,9 +27,9 @@ class IndexPage extends React.Component {
     }
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll")
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll")
+  // }
 
   toggleContact() {
     if (this.state.showContact) {

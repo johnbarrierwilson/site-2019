@@ -60,7 +60,9 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
-          />
+          >
+            <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
+          </Helmet>
         )
       }}
     />

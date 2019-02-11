@@ -1,4 +1,5 @@
 import React from "react"
+// import {graphql} from 'gatsby'
 
 import Blob from '../components/blob'
 import Contact from '../components/contact'
@@ -50,6 +51,7 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const shots = this.props.data.allDribleProjects.edges
     const date = new Date().getFullYear()
     return (
       <Layout>
@@ -84,7 +86,23 @@ class IndexPage extends React.Component {
             <button className="button" onClick={this.toggleContact}>Book Now</button>
           </div>
         </div>
-        <div className="slide slide--process">
+        <div className="slide slide--center">
+          <div className="slide-content">
+            <h2>My Work</h2>
+            <div className="grid grid--shots">
+              {shots.map((shot, index) => {
+                console.log(shot)
+                return (
+                  <a className="shot" href={shot.node.url} key={`${shot.node.name}-${index}`}>
+                    <img src={shot.node.cover} alt={`shot from dribble titled ${shot.node.title}`} />
+                  </a>
+                )
+              })}
+            </div>
+            <a href="https://www.dribbble.com/johnbarrierwilson" className="button">View More</a>
+          </div>
+        </div>
+        <div className="slide slide--center">
           <div className="slide-content">
             <h2>The Pragmatic Process</h2>
             <p>It's easier than you might think to bring innovation to your small business:</p>
@@ -129,5 +147,22 @@ class IndexPage extends React.Component {
     )
   }
 }
+
+export const query = graphql`
+  query homepageQuery {
+    allDribleProjects (
+      limit: 8,
+      sort: {fields: [published], order: DESC}
+    ) {
+      edges {
+        node {
+          cover
+          title
+          url
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

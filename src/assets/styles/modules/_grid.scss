@@ -7,12 +7,22 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $b-space;
+  @include respond-to($g-m) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  img {
+    display: block;
+  }
 }
 
 // -------------------------------------
-//   Large Comment
+//   Modifiers
 // -------------------------------------
+
+.grid--shots {
+  margin: ($b-space * 2) 0;
+}
 
 // ----- Standard Comment ----- //
 

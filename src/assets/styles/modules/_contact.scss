@@ -22,6 +22,9 @@
   text-align: center;
   top: 0;
   z-index: $z-contact;
+  p {
+    max-width: ($b-maxWidth * 0.75);
+  }
 }
 
 // -------------------------------------

@@ -13,7 +13,7 @@ class Contact extends React.Component {
       <div className={classNames} >
         <button className="contact-close" onClick={this.props.toggleContact}>&times;</button>
         <h1>Book Now</h1>
-        <p>All I need is your name, email and preferred date/time!</p>
+        <p>Schedule your free consultation to start your project. All I need is your name, email and preferred date/time!</p>
         <form className="form">
           <input className="input" type="text" placeholder="John Barrier Wilson"></input>
           <input className="input" type="email" placeholder="email@example.com"></input>

@@ -110,9 +110,9 @@ class IndexPage extends React.Component {
             <h2>The Pragmatic Process</h2>
             <p>It's easier than you might think to bring innovation to your small business:</p>
             <ol className="process">
-              <li>Schedule a<br />free consultation</li>
-              <li>We design and<br />build your website.</li>
-              <li>Proudly share and<br />grow your business</li>
+              <li>Schedule a free&nbsp;consultation</li>
+              <li>We design and build your&nbsp;website.</li>
+              <li>Proudly share and grow your&nbsp;business</li>
             </ol>
           </div>
         </div>

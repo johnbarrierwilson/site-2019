@@ -140,7 +140,7 @@ class IndexPage extends React.Component {
                   <li>Branding: <a href="https://www.carnleydesign.com/">Josh Carnley</a></li>
                   <li>Messaging: <a href="https://www.storybrand.com/">Storybrand</a></li>
                   <li>Type: <a href="https://luzi-type.ch/nantes">Nantes Light</a> &amp; <a href="https://luzi-type.ch/cadiz">Cadiz Regular</a></li>
-                  <li>"Blob" Animation: <a href="https://www.threejs.org">Three.js</a></li>
+                  <li>"Blob" Animation: <a href="https://threejs.org">Three.js</a></li>
                   <li>Stack: <a href="https://www.gatsbyjs.org">Gatsby.js</a> &amp; <a href="https://www.netlify.com">Netlify</a></li>
                 </ul>
               </div>

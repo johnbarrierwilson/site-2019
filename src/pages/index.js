@@ -93,14 +93,11 @@ class IndexPage extends React.Component {
               <p>You can have a website just like the dozens I've created for other businesses like yours.</p>
             </div>
             <div className="grid grid--shots">
-              {shots.map((shot, index) => {
-                console.log(shot)
-                return (
-                  <a className="shot" href={shot.node.url} key={`${shot.node.name}-${index}`}>
-                    <img src={shot.node.cover} alt={`shot from dribble titled ${shot.node.title}`} />
-                  </a>
-                )
-              })}
+              {shots.map((shot, index) => (
+                <a className="shot" href={shot.node.url} key={`${shot.node.name}-${index}`}>
+                  <img src={shot.node.cover} alt={`shot from dribble titled ${shot.node.title}`} />
+                </a>
+              ))}
             </div>
             <a href="https://www.dribbble.com/johnbarrierwilson" className="button">View More</a>
           </div>

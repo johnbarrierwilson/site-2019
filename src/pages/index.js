@@ -1,6 +1,5 @@
 import React from "react"
 import {graphql} from 'gatsby'
-import {debounce} from 'lodash'
 
 import Blob from '../components/blob'
 import Contact from '../components/contact'

@@ -69,9 +69,9 @@ class Blob extends React.Component {
   render(){
     return(
       <div
+        id="blob"
         className="blob"
         ref={(blob) => { this.blob = blob }}
-        style={{ transform: `translateX(${this.props.shift < 450 ? this.props.shift * -0.05 : -22.5}%)` }}
       />
     )
   }

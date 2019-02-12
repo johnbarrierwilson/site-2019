@@ -1,5 +1,6 @@
 import React from "react"
 import {graphql} from 'gatsby'
+import {debounce} from 'lodash'
 
 import Blob from '../components/blob'
 import Contact from '../components/contact'
@@ -15,22 +16,31 @@ class IndexPage extends React.Component {
       distance: 0,
       showContact: false
     }
+    this.slideBlob = this.slideBlob.bind(this)
     this.toggleContact = this.toggleContact.bind(this)
   }
 
   componentDidMount() {
-    if (window.outerWidth > 1024) {
-      window.addEventListener("scroll", () => {
-        this.setState({
-          distance: window.scrollY
-        })
-      })
+    if (window.outerWidth >= 1024) {
+      window.addEventListener("scroll", this.slideBlob)
     }
   }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll")
-  // }
+  componentWillUnmount() {
+    if (window.outerWidth >= 1024) {
+      window.removeEventListener("scroll", this.slideBlob)
+    }
+  }
+
+  slideBlob() {
+    const blob = document.getElementById('blob')
+    const distance = window.scrollY
+    if (distance >= 450) {
+      blob.style = 'transform: translateX(-22.5%)'
+    } else {
+      blob.style = `transform: translateX(${distance * -0.05}%)`
+    }
+  }
 
   toggleContact() {
     if (this.state.showContact) {
@@ -51,13 +61,14 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    console.log('rendered')
     const shots = this.props.data.allDribleProjects.edges
     const date = new Date().getFullYear()
     return (
       <Layout>
         <Navigation toggleContact={this.toggleContact} />
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <Blob shift={this.state.distance} />
+        <Blob />
         <div className="slide slide--hero">
           <div className="slide-content">
             <h1>Innovative Websites</h1>
@@ -108,7 +119,7 @@ class IndexPage extends React.Component {
             <p>It's easier than you might think to bring innovation to your small business:</p>
             <ol className="process">
               <li>Schedule a free&nbsp;consultation</li>
-              <li>We design and build your&nbsp;website.</li>
+              <li>We design and build your&nbsp;website</li>
               <li>Proudly share and grow your&nbsp;business</li>
             </ol>
           </div>
@@ -116,7 +127,7 @@ class IndexPage extends React.Component {
         <div className="slide">
           <div className="slide-content">
             <h2>Your Future</h2>
-            <p>If you continue to use template sites, you'll continue to be obscure. And that is incredibly dangerous for your business. The great news is that you can stand out, feel proud, earn more revenue and truly reflect your business through your website. <span className="tco">It's just one click away.</span></p>
+            <p>If you continue to use template sites, you'll continue to be obscure. And that is incredibly dangerous for your business. The great news is that you can stand out, feel proud, earn more revenue and truly reflect your business through your website. <span className="tco">It's&nbsp;just&nbsp;one&nbsp;click&nbsp;away.</span></p>
             <button className="button" onClick={this.toggleContact}>Book Now</button>
           </div>
         </div>

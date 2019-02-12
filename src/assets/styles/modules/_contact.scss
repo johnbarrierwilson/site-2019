@@ -39,26 +39,28 @@
 
 .contact-close {
   -webkit-appearance: none;
-  background: none;
-  border: 1px solid rgba($c-white, 0.4);
+  background: rgba($c-white, 0.25);
+  border: none;
   border-radius: 50%;
   color: $c-white;
   cursor: pointer;
+  display: block;
   font-size: 200%;
   font-weight: 300;
   height: 40px;
   line-height: 109%;
   outline: none;
+  padding: 0;
   position: fixed;
-  right: 24px;
-  top: 24px;
-  width: 40px !important;
+  right: 22px;
+  top: 22px;
+  width: 40px;
   @include respond-to($g-l) {
     height: 50px;
     line-height: 47px;
     right: 40px;
     top: 40px;
-    width: 50px !important;
+    width: 50px;
   }
 }
 

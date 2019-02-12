@@ -4,9 +4,23 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Innovative websites that save businesses from obscurity | John Barrier Wilson`,
+    author: '@barrierwilson',
     description: `Innovative websites that save businesses from obscurity.`,
-    author: '@barrierwilson'
+    keywords: [
+      'web',
+      'website',
+      'design',
+      'development', 
+      'small business',
+      'startup',
+      'marketing',
+      'storybrand',
+      'ui design',
+      'ux design',
+      'front-end development',
+      'frontend development'
+    ],
+    title: `Innovative websites that save businesses from obscurity | John Barrier Wilson`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

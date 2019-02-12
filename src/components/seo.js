@@ -10,6 +10,7 @@ function SEO({ description, lang, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+        const keywords = data.site.siteMetadata.keywords
         return (
           <Helmet
             htmlAttributes={{
@@ -24,7 +25,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:title`,
-                content: title,
+                content: 'John Barrier Wilson | Websites',
               },
               {
                 property: `og:description`,
@@ -44,21 +45,17 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `twitter:title`,
-                content: title,
+                content: 'John Barrier Wilson | Websites',
               },
               {
                 name: `twitter:description`,
                 content: metaDescription,
               },
             ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
+              .concat({
+                name: `keywords`,
+                content: keywords.join(`, `),
+              })
               .concat(meta)}
           >
             <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
@@ -89,9 +86,10 @@ const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
       siteMetadata {
-        title
-        description
         author
+        description
+        keywords
+        title
       }
     }
   }

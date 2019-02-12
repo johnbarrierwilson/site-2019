@@ -47,8 +47,8 @@ class Contact extends React.Component {
           <>
             <p>To schedule your free consultation, all I need is your name &amp; email!</p>
             <form className="form" onSubmit={this.handleSubmit}>
-              <input className="input" name="name" type="text" placeholder="John Barrier Wilson" onChange={this.handleChange} value={this.state.name}></input>
-              <input className="input" name="email" type="email" placeholder="email@example.com" onChange={this.handleChange} value={this.state.email}></input>
+              <input className="input" name="name" type="text" placeholder="John Barrier Wilson" onChange={this.handleChange} value={this.state.name} required></input>
+              <input className="input" name="email" type="email" placeholder="email@example.com" onChange={this.handleChange} value={this.state.email} required></input>
               <input className="button button--form" type="submit"></input>
             </form>
           </>

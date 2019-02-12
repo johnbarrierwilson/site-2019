@@ -37,6 +37,7 @@
       color: $c-black;
       content: counter(process);
       display: inline-flex;
+      flex-shrink: 0;
       height: 40px;
       justify-content: center;
       margin: 0 16px 16px 0;

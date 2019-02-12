@@ -67,7 +67,7 @@ class IndexPage extends React.Component {
         <div className="slide">
           <div className="slide-content">
             <h2>The Big Problem</h2>
-            <p className="tsl">The bland Squarespace and Wix websites are too common. If your website doesn't stand out, you will loose leads and potential customers. Enough is enough, you need to be recognized for all your hard work and your website needs to truly reflect your incredible business.</p>
+            <p className="tsl">The bland Squarespace and Wix websites are too common. If your website doesn't stand out, you will lose leads and potential customers. Enough is enough, you need to be recognized for all your hard work and your website needs to truly reflect your incredible business.</p>
           </div>
         </div>
         <div className="slide">

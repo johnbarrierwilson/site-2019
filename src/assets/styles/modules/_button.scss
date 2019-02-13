@@ -32,14 +32,14 @@
 .button--fixed {
   font-size: 0.75rem;
   margin-top: 0;
-  padding: 8px 24px;
+  padding: 12px 24px;
   position: fixed;
   right: 20px;
-  top: 20px;
+  top: 18px;
   z-index: $z-book;
   @include respond-to($g-l) {
     font-size: 0.875rem;
-    padding: 12px 32px;
+    padding: 16px 32px;
     right: 40px;
     top: 40px;
   }
@@ -58,6 +58,18 @@
   }
   &:hover {
     background: lighten($c-black, 10%)
+  }
+}
+
+.button--inverted {
+  background: $c-white;
+  background-image: linear-gradient(to right, $c-white, $c-gray);
+  color: $c-black;
+  &:hover {
+    background: $c-white;
+    background-image: none;
+    color: $c-black;
+    opacity: 0.8;
   }
 }
 

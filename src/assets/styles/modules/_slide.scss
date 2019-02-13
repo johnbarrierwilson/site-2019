@@ -40,10 +40,10 @@
   margin: 0;
   .slide-content {
     margin-left: 0;
-    max-width: 220px;
+    max-width: 250px;
     text-align: center;
     @include respond-to($g-l) {
-      max-width: $b-maxWidth;
+      max-width: ($b-maxWidth * 1.5);
     }
   }
 }

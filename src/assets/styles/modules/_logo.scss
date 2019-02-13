@@ -31,6 +31,12 @@
       width: 50px;
     }
   }
+  span {
+    display: block;
+    @include respond-to($g-m) {
+      display: block;
+    }
+  }
 }
 
 // -------------------------------------

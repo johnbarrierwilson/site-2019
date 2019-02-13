@@ -60,7 +60,6 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    console.log('rendered')
     const shots = this.props.data.allDribleProjects.edges
     const date = new Date().getFullYear()
     return (
@@ -70,8 +69,9 @@ class IndexPage extends React.Component {
         <Blob />
         <div className="slide slide--hero">
           <div className="slide-content">
-            <h1>Innovative Websites</h1>
-            <p className="tsl">Saving businesses from obscurity.</p>
+            <h1>Unique Websites</h1>
+            <p className="tsl">Helping you save your business from obscurity.</p>
+            <button className="button button--inverted" onClick={this.toggleContact}>Book a call</button>
           </div>
         </div>
         <div className="slide">
@@ -93,7 +93,7 @@ class IndexPage extends React.Component {
               <li>Website Development</li>
               <li>Maintenance &amp; Iteration</li>
             </ul>
-            <button className="button" onClick={this.toggleContact}>Book Now</button>
+            <button className="button" onClick={this.toggleContact}>Book a call</button>
           </div>
         </div>
         <div className="slide slide--center">
@@ -114,20 +114,21 @@ class IndexPage extends React.Component {
         </div>
         <div className="slide slide--center">
           <div className="slide-content">
-            <h2>The Pragmatic Process</h2>
+            <h2>The Process</h2>
             <p>It's easier than you might think to bring innovation to your small business:</p>
             <ol className="process">
               <li>Schedule a free&nbsp;consultation</li>
-              <li>We design and build your&nbsp;website</li>
+              <li>We design &amp; I build your&nbsp;website</li>
               <li>Proudly share and grow your&nbsp;business</li>
             </ol>
+            <button className="button" onClick={this.toggleContact}>Book a call</button>
           </div>
         </div>
         <div className="slide">
           <div className="slide-content">
             <h2>Your Future</h2>
-            <p>If you continue to use template sites, you'll continue to be obscure. And that is incredibly dangerous for your business. The great news is that you can stand out, feel proud, earn more revenue and truly reflect your business through your website. <span className="tco">It's&nbsp;just&nbsp;one&nbsp;click&nbsp;away.</span></p>
-            <button className="button" onClick={this.toggleContact}>Book Now</button>
+            <p>Stop wasting money on large agencies who charge a lot to create a boring, standard website. You can easily stand out, feel proud, earn more money and truly reflect your business through your website. <span className="tco">It's&nbsp;just&nbsp;one&nbsp;click&nbsp;away.</span></p>
+            <button className="button" onClick={this.toggleContact}>Book a call</button>
           </div>
         </div>
         <div className="slide slide--footer">

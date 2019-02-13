@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     author: '@barrierwilson',
-    description: `Innovative websites that save businesses from obscurity.`,
+    description: `I create innovative websites that save businesses from obscurity.`,
     keywords: [
       'web',
       'website',
@@ -20,7 +20,7 @@ module.exports = {
       'front-end development',
       'frontend development'
     ],
-    title: `Innovative websites that save businesses from obscurity | John Barrier Wilson`
+    title: `Hi. My name is John Barrier Wilson.`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

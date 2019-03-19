@@ -69,8 +69,8 @@ class IndexPage extends React.Component {
         <Blob />
         <div className="slide slide--hero">
           <div className="slide-content">
-            <h1>Unique Websites</h1>
-            <p className="tsl">Helping you save your business from obscurity.</p>
+            <h1>I make websites.</h1>
+            <p className="tsl">Websites that help you become more noticed.</p>
             <button className="button button--inverted" onClick={this.toggleContact}>Book a call</button>
           </div>
         </div>

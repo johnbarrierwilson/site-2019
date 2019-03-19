@@ -10,7 +10,7 @@ const Navigation = (props) => (
       <span>hi. my name is john&nbsp;barrier&nbsp;wilson</span>
     </p>
     <button className="button button--fixed" onClick={props.toggleContact}>Book a call</button>
-    <p className="tagline">unique websites</p>
+    <p className="tagline">ui/ux design + development</p>
     <img className="monogram" src={Monogram} alt="monogram based logo" />
   </>
 )

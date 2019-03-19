@@ -43,7 +43,7 @@
     max-width: 250px;
     text-align: center;
     @include respond-to($g-l) {
-      max-width: ($b-maxWidth * 1.5);
+      max-width: ($b-maxWidth * 1.35);
     }
   }
 }

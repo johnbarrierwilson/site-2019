@@ -20,13 +20,13 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    if (window.outerWidth >= 1024) {
+    if (window.outerWidth >= 1050) {
       window.addEventListener("scroll", this.slideBlob)
     }
   }
 
   componentWillUnmount() {
-    if (window.outerWidth >= 1024) {
+    if (window.outerWidth >= 1050) {
       window.removeEventListener("scroll", this.slideBlob)
     }
   }
@@ -99,9 +99,6 @@ class IndexPage extends React.Component {
         <div className="slide slide--center">
           <div className="slide-content">
             <h2>My Work</h2>
-            <div className="cell cell--s">
-              <p>You can have a website just like the dozens I've created for other businesses like yours.</p>
-            </div>
             <div className="grid grid--shots">
               {shots.map((shot, index) => (
                 <a className="shot" href={shot.node.url} key={`${shot.node.name}-${index}`}>

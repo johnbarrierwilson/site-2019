@@ -1,0 +1,35 @@
+// *************************************
+//
+//   Hero
+//   -> About page heading
+//
+// *************************************
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 40px 2fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  height: calc(100vh - #{$b-space * 2});
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.hero-content {
+  display: flex;
+  flex-flow: column nowrap;
+  grid-column: 3 / span 2;
+  grid-row: 2 / span 1;
+  justify-content: center;
+  position: relative;
+  z-index: $z-heroContent;
+}
+
+.hero-image {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  img {
+    object-position: 100% 50% !important;
+  }
+}

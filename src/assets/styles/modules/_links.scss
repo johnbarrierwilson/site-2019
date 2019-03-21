@@ -1,0 +1,38 @@
+// *************************************
+//
+//   Links
+//   -> Upper right navigation
+//
+// *************************************
+
+.links {
+  align-items: center;
+  display: flex;
+  position: fixed;
+  right: 20px;
+  top: 18px;
+  z-index: $z-links;
+  @include respond-to($g-l) {
+    right: 40px;
+    top: 40px;
+  }
+  .button {
+    margin-top: 0;
+  }
+  a:not(.button) {
+    color: $c-white;
+    margin-right: $b-space;
+    border-bottom: none;
+    &:hover {
+      color: $c-orange;
+    }
+  }
+}
+
+// -------------------------------------
+//   Large Comment
+// -------------------------------------
+
+// ----- Standard Comment ----- //
+
+// Small Comment

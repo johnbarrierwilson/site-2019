@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 
 import Blob from '../components/blob'
 import Contact from '../components/contact'
@@ -118,6 +118,9 @@ class IndexPage extends React.Component {
               <li>We design &amp; I build your&nbsp;website</li>
               <li>Proudly share and grow your&nbsp;business</li>
             </ol>
+            <div className='well'>
+              <Link to='/about'>Looking for a more detailed plan?</Link>
+            </div>
             <button className="button" onClick={this.toggleContact}>Book a call</button>
           </div>
         </div>
